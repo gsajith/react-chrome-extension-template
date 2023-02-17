@@ -1,0 +1,40 @@
+{
+    "name": "React Chrome Extension Template",
+    "version": "0.1.0",
+    "description": "React Chrome Extension Template",
+    "manifest_version": 3,
+    "permissions": ["activeTab",  "scripting", "tabs"],
+    "icons": {
+        "16": "icon-16.png",
+        "24": "icon-24.png",
+        "32": "icon-32.png",
+        "64": "icon-64.png",
+        "128": "icon-128.png"
+    },
+    "background": {
+      "service_worker": "./static/js/background.js"
+    },
+    "externally_connectable": {
+      "matches": ["*://*.google.com/*"]
+    },
+    "action": {
+        "default_icon": {
+          "16": "icon-16.png",
+          "24": "icon-24.png",
+          "32": "icon-32.png",
+          "64": "icon-64.png",
+          "128": "icon-128.png"
+        },
+        "default_title": "React Chrome Extension Template",
+        "default_popup": "index.html"
+      },
+      "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["./static/js/content.js"],
+          "all_frames": false,
+          "run_at": "document_end"
+        }
+    ]
+
+  }
