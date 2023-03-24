@@ -5,8 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript',
-    'plugin:react-hooks/recommended'
+    'standard-with-typescript'
   ],
   overrides: [
   ],
@@ -19,13 +18,5 @@ module.exports = {
     'react'
   ],
   rules: {
-    '@typescript-eslint/no-floating-promises': 'warn',
-    semi: [2, 'always'],
-    '@typescript-eslint/semi': ['off']
-  },
-  settings: {
-    react: {
-      version: 'detect'
-    }
   }
 }

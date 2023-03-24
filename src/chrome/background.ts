@@ -1,18 +1,18 @@
-export {};
+export {}
 /** Fired when the extension is first installed,
  *  when the extension is updated to a new version,
  *  and when Chrome is updated to a new version. */
 chrome.runtime.onInstalled.addListener((details) => {
-  console.log('[background.js] onInstalled', details);
-});
+  console.log('[background.js] onInstalled', details)
+})
 
 chrome.runtime.onConnect.addListener((port) => {
-  console.log('[background.js] onConnect', port);
-});
+  console.log('[background.js] onConnect', port)
+})
 
 chrome.runtime.onStartup.addListener(() => {
-  console.log('[background.js] onStartup');
-});
+  console.log('[background.js] onStartup')
+})
 
 /**
  *  Sent to the event page just before it is unloaded.
@@ -24,5 +24,5 @@ chrome.runtime.onStartup.addListener(() => {
  *  unloaded the onSuspendCanceled event will
  *  be sent and the page won't be unloaded. */
 chrome.runtime.onSuspend.addListener(() => {
-  console.log('[background.js] onSuspend');
-});
+  console.log('[background.js] onSuspend')
+})
